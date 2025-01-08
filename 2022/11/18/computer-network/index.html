@@ -282,18 +282,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1-计算机网络概述"><a href="#1-计算机网络概述" class="headerlink" title="1. 计算机网络概述"></a>1. 计算机网络概述</h1><h2 id="1-1-三种交换方式的对比"><a href="#1-1-三种交换方式的对比" class="headerlink" title="1.1. 三种交换方式的对比"></a>1.1. 三种交换方式的对比</h2><blockquote>
+        <html><head></head><body><h1 id="1-计算机网络概述"><a href="#1-计算机网络概述" class="headerlink" title="1. 计算机网络概述"></a>1. 计算机网络概述</h1><h2 id="1-1-三种交换方式的对比"><a href="#1-1-三种交换方式的对比" class="headerlink" title="1.1. 三种交换方式的对比"></a>1.1. 三种交换方式的对比</h2><blockquote>
 <p>假设A，B，C，D是分组传输路径所要经过的4个结点交换机，纵坐标为时间</p>
 </blockquote>
 <p><img src="/../images/computer-network/2022-11-18-18-53-29.png" alt="Alt text"></p>
 <span id="more"></span>
 <h2 id="1-2-计算机网络的性能指标"><a href="#1-2-计算机网络的性能指标" class="headerlink" title="1.2. 计算机网络的性能指标"></a>1.2. 计算机网络的性能指标</h2><p>数据与速率量</p>
 <p><img src="/../images/computer-network/2022-11-18-19-38-20.png"></p>
-<p>1MB &#x3D; 2^10B &#x3D; (2^10) * 8 bit<br>1Mb &#x3D; 1*10^6bit</p>
+<p>1MB = 2^10B = (2^10) * 8 bit<br>1Mb = 1*10^6bit</p>
 <ul>
 <li>带宽</li>
 </ul>
-<p>单位 Hz 或 b&#x2F;s<br>即某一点到另一点所能通过的最高数据率 </p>
+<p>单位 Hz 或 b/s<br>即某一点到另一点所能通过的最高数据率 </p>
 <ul>
 <li>吞吐量</li>
 </ul>
@@ -301,19 +301,19 @@
 <ul>
 <li>时延</li>
 </ul>
-<p>总时延 &#x3D; 发送时延 + 传播时延 + 处理时延 （处理时延 + 排队时延）</p>
+<p>总时延 = 发送时延 + 传播时延 + 处理时延 （处理时延 + 排队时延）</p>
 <ol>
-<li>发送时延 &#x3D; 分组长度(b)&#x2F;发送速率(b&#x2F;s) 发送速率&#x3D;max(网卡速率，信道带宽，接口速率)</li>
-<li>传播时延 &#x3D; 信道长度&#x2F;传播速率 信道长度&#x3D;传送距离</li>
+<li>发送时延 = 分组长度(b)/发送速率(b/s) 发送速率=max(网卡速率，信道带宽，接口速率)</li>
+<li>传播时延 = 信道长度/传播速率 信道长度=传送距离</li>
 </ol>
 <p><img src="/../images/computer-network/2022-11-18-19-48-11.png"></p>
 <blockquote>
-<p>注意发送速率和传播速率区别，计算中的<strong>单位转换</strong><br>发送速率&#x3D;传输速率</p>
+<p>注意发送速率和传播速率区别，计算中的<strong>单位转换</strong><br>发送速率=传输速率</p>
 </blockquote>
 <ul>
 <li>时延带宽积</li>
 </ul>
-<p>时延带宽积 &#x3D; 传播时延 * 带宽</p>
+<p>时延带宽积 = 传播时延 * 带宽</p>
 <p><img src="/../images/computer-network/2022-11-18-19-59-15.png"></p>
 <ul>
 <li>利用率</li>
@@ -328,7 +328,7 @@
 </ol>
 <p><img src="/../images/computer-network/2022-11-18-20-02-49.png"></p>
 <blockquote>
-<p>如今用的最多的是TCP&#x2F;IP体系结构，现今规模最大的、覆盖全球的、基于TCP&#x2F;IP的互联网并未使用OSI标准。<br>TCP&#x2F;IP体系结构相当于将OSI体系结构的物理层和数据链路层合并为了网络接口层，并去掉了会话层和表示层。<br>TCP&#x2F;IP在网络层使用的协议是IP协议，IP协议的意思是网际协议，因此TCP&#x2F;IP体系结构的网络层称为网际层<br><em>路由器一般只包含网络接口层和网际层。</em></p>
+<p>如今用的最多的是TCP/IP体系结构，现今规模最大的、覆盖全球的、基于TCP/IP的互联网并未使用OSI标准。<br>TCP/IP体系结构相当于将OSI体系结构的物理层和数据链路层合并为了网络接口层，并去掉了会话层和表示层。<br>TCP/IP在网络层使用的协议是IP协议，IP协议的意思是网际协议，因此TCP/IP体系结构的网络层称为网际层<br><em>路由器一般只包含网络接口层和网际层。</em></p>
 </blockquote>
 <p><img src="/../images/computer-network/2022-11-18-20-05-27.png"></p>
 <blockquote>
@@ -352,7 +352,7 @@
 <blockquote>
 <p>在协议的控制下，两个对等实体间的逻辑通信使得本层能够向上一层提供务。<br>要实现本层协议，还需要使用下面一层所提供的服务。<br>协议是“水平的”，服务是“垂直的”。<br>实体看得见相邻下层所提供的服务，但并不知道实现该服务的具体协议。也就是说，下面的协议对上面的实体是”透明”的。</p>
 </blockquote>
-
+</body></html>
     </div>
 
     
